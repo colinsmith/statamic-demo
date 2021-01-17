@@ -1,0 +1,15 @@
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', Arial;
+  --white: #FFFFFF;
+  --black: #000000;
+  --light-blue: #CFE9FF;
+  --blue: #0096FE;
+  --light-gray: #F5F5F8;
+  --medium-gray: #45567C;
+  --dark-gray: #36476C;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
