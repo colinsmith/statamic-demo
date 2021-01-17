@@ -1,0 +1,14 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: email_address
+        field:
+          placeholder: name@email.com
+          input_type: email
+          antlers: false
+          display: 'Email address'
+          type: text
+          icon: text
+          listable: hidden

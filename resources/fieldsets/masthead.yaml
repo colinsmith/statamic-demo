@@ -1,0 +1,54 @@
+title: Masthead
+fields:
+  -
+    handle: image_left
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      display: 'Image (Left)'
+      type: assets
+      icon: assets
+      instructions: 'The image to appear on the left side of the masthead.'
+      width: 50
+      listable: false
+  -
+    handle: image_right
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      display: 'Image (Right)'
+      type: assets
+      icon: assets
+      instructions: 'The image to appear on the right side of the masthead.'
+      width: 50
+      listable: false
+  -
+    handle: introduction_content
+    field:
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      smartypants: false
+      antlers: false
+      display: 'Introduction Content'
+      type: markdown
+      icon: markdown
+      instructions: 'The content to appear in the Masthead'
+      listable: false
+  -
+    handle: signup_form
+    field:
+      placeholder: name@email.com
+      max_items: 1
+      display: 'Signup Form'
+      type: form
+      icon: form
+      instructions: 'An email signup form.'
+      listable: false

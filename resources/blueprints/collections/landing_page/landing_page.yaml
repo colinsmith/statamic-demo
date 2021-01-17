@@ -1,0 +1,38 @@
+title: 'Landing Pages'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          type: markdown
+          localizable: true
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+  header_menu:
+    display: 'Header Menu'
+    fields:
+      -
+        import: header_menu
+  masthead:
+    display: Masthead
+    fields:
+      -
+        import: masthead

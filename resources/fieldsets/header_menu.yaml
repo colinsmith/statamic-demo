@@ -1,0 +1,52 @@
+title: 'Header Menu'
+fields:
+  -
+    handle: header_links
+    field:
+      collapse: false
+      sets:
+        link:
+          display: Link
+          fields:
+            -
+              handle: link_title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                instructions: 'The title of the link.'
+                listable: hidden
+            -
+              handle: url
+              field:
+                display: 'Link to page'
+                type: link
+                icon: link
+                instructions: 'The link destination'
+                listable: hidden
+                validate:
+                  - required
+            -
+              handle: is_button
+              field:
+                display: 'Display as button?'
+                type: toggle
+                icon: toggle
+                instructions: 'If selected, this link will appear as a button.'
+                width: 50
+                listable: hidden
+            -
+              handle: is_aligned_right
+              field:
+                display: 'Align right?'
+                type: toggle
+                icon: toggle
+                instructions: 'Should this item be aligned to the right?'
+                width: 50
+                listable: hidden
+      display: 'Header Links'
+      type: replicator
+      icon: replicator
+      listable: hidden
