@@ -1,0 +1,14 @@
+<ul class="menu menu__left">
+  {{ header_links }}
+    {{ if !is_aligned_right }}
+      {{ partial:header-menu/menu-link }}
+    {{ /if }}
+  {{ /header_links }}
+</ul>
+<ul class="menu menu__right">
+  {{ header_links }}
+    {{ if is_aligned_right }}
+      {{ partial:header-menu/menu-link }}
+    {{ /if }}
+  {{ /header_links }}
+</ul>

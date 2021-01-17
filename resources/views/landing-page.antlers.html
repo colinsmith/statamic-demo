@@ -4,77 +4,14 @@
 
     <!-- Header Nav -->
     <div class="header-nav">
-      <ul class="menu menu__left">
-        {{ header_links }}
-          {{ if !is_aligned_right }}
-          <li class="menu__item">
-            <a class="menu__link {{ is_button ? 'button' : 'text' }}"  href="{{ url }}">{{ link_title }}</a>
-          </li>
-          {{ /if }}
-        {{ /header_links }}
-      </ul>
-      <ul class="menu menu__right">
-        {{ header_links }}
-          {{ if is_aligned_right }}
-            <li class="menu__item">
-              <a class="menu__link {{ is_button ? 'button' : 'text' }}"  href="{{ url }}">{{ link_title }}</a>
-            </li>
-          {{ /if }}
-        {{ /header_links }}
-      </ul>
+      {{ partial:header-menu/menu }}
     </div>
 
     <!-- Masthead -->
     <div class="masthead">
-
-      {{ image_left }}
-        <img src="{{ image_left }}" alt="{{ alt }}" />
-      {{ /image_left }}
-      
-      <div class="intro">
-
-        {{ if introduction_content }}
-          {{ introduction_content }}
-        {{ /if }}
-
-        {{ form:signup_form }}
-          <div class="form mt-6">
-
-            {{ if success }}
-              <div class="w-full bg-green-500 text-white p-2">
-                {{ success }}
-              </div>
-            {{ else }}
-              {{ if errors }}
-                <div class="w-full bg-red-500 text-white p-2">
-                  {{ errors }}
-                    {{ value }}<br>
-                  {{ /errors }}
-                </div>
-              {{ /if }}
-              
-              {{ fields }}
-                <div class="form-input-group flex-grow">
-                  <div class="form-field form-input">
-                    {{ field }}
-                  </div>
-                </div>  
-              {{ /fields }}
-              
-              <div class="form-input-group flex-grow-0">
-                <div class="form-field form-submit">
-                  <input class="button" name="submit" title="Submit" type="submit" value="Get Your Demo" />
-                </div>
-              </div>
-            {{ /if }}
-
-          </div>
-        {{ /form:signup_form }}
-        
-      </div>
-      {{ image_right }}
-        <img src="{{ image_right }}" alt="{{ alt }}" />
-      {{ /image_right }}
+      {{ partial:masthead/image :handle="image_left" }}
+      {{ partial:masthead/introduction }}
+      {{ partial:masthead/image :handle="image_right" }}
     </div>
 
   </div>

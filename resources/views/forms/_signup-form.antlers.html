@@ -1,0 +1,33 @@
+{{ form:signup_form }}
+  <div class="form mt-6">
+
+    {{ if success }}
+      <div class="w-full bg-green-500 text-white p-2">
+        {{ success }}
+      </div>
+    {{ else }}
+      {{ if errors }}
+        <div class="w-full bg-red-500 text-white p-2">
+          {{ errors }}
+            {{ value }}<br>
+          {{ /errors }}
+        </div>
+      {{ /if }}
+      
+      {{ fields }}
+        <div class="form-input-group flex-grow">
+          <div class="form-field form-input">
+            {{ field }}
+          </div>
+        </div>  
+      {{ /fields }}
+      
+      <div class="form-input-group flex-grow-0">
+        <div class="form-field form-submit">
+          <input class="button" name="submit" title="Submit" type="submit" value="Get Your Demo" />
+        </div>
+      </div>
+    {{ /if }}
+
+  </div>
+{{ /form:signup_form }}
